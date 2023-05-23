@@ -4,7 +4,7 @@ Shout out to Danny Ma for providing these data sets and real world business ques
 
 I used MySQL workbench for the following case studies. 
 
-[Case Study #1 - Danny's Diner] (https://github.com/kevincombs08/8_week_sql_challenge/tree/main/Danny's%20Diner)
+[Case Study #1 - Danny's Diner](https://github.com/kevincombs08/8_week_sql_challenge/tree/main/Danny's%20Diner)
 
 Case Study #2 - Pizza Runner
 
