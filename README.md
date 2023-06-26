@@ -18,4 +18,9 @@ I used MySQL workbench for the following case studies.
 
 [Case Study #7 - Balanced Tree Clothing Co.](https://github.com/kevincombs08/8_week_sql_challenge/tree/main/Balanced%20Tree%20Clothing%20Co.)
 
+Data In Motion SQL Case Studies!
+
+[Case Study #1](https://github.com/kevincombs08/8_week_sql_challenge/tree/main/Data%20In%20Motion)
+[Case Study #2](https://github.com/kevincombs08/8_week_sql_challenge/tree/main/Data%20In%20Motion)
+
 Thanks again!
