@@ -21,8 +21,8 @@ I used MySQL workbench for the following case studies.
 
 # Data In Motion SQL Case Studies!
 
-[Case Study #1](https://github.com/kevincombs08/8_week_sql_challenge/tree/main/Data%20In%20Motion) 1️⃣
+[Case Study #1](https://github.com/kevincombs08/8_week_sql_challenge/tree/main/Data%20In%20Motion) 
 
-[Case Study #2](https://github.com/kevincombs08/8_week_sql_challenge/tree/main/Data%20In%20Motion) 2️⃣
+[Case Study #2](https://github.com/kevincombs08/8_week_sql_challenge/tree/main/Data%20In%20Motion) 
 
 Thanks again!
