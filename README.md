@@ -18,6 +18,4 @@ Case Study #6 - Clique Bait
 
 Case Study #7 - Balanced Tree Clothing Co.
 
-Case Study #8 - Fresh Segments
-
 Thanks again!
