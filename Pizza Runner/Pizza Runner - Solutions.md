@@ -1,8 +1,8 @@
 -- Data Cleaning & Validation
 ------------------------------------------------------------------------------------------------
-```
+
 SELECT * FROM runner_orders; 
-```
+
 UPDATE runner_orders
 SET pickup_time = CASE WHEN pickup_time LIKE('') THEN NULL ELSE pickup_time END,
 	distance = CASE WHEN distance LIKE ('%km') THEN TRIM('km' FROM distance) 
@@ -32,17 +32,16 @@ SET exclusions = CASE WHEN exclusions LIKE ('') THEN NULL
 
 ALTER TABLE customer_orders
 MODIFY COLUMN order_time DATETIME; 
-```
 ------------------------------------------------------------------------------------------------
 
 -- Q&A
-		-- A. Pizza Metrics
+-- A. Pizza Metrics
         
 -- 1. How many pizzas were ordered?
-```
+
 SELECT COUNT(order_id) AS pizza_count
 FROM customer_orders;
-```
+
 
 -- 2. How many unique customer orders were made?
 
