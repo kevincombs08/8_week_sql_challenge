@@ -40,7 +40,6 @@ MODIFY COLUMN order_time DATETIME;
 ``` 
 ------------------------------------------------------------------------------------------------
 
--- Q&A
 -- A. Pizza Metrics
         
 -- 1. How many pizzas were ordered?
