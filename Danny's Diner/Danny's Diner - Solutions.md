@@ -1,5 +1,5 @@
 -- 1. What is the total amount each customer spent at the restaurant?
-
+```
 SELECT
 	customer_id
     ,SUM(m.price) total
@@ -8,7 +8,7 @@ FROM sales AS s
 		ON s.product_id = m.product_id
 GROUP BY customer_id
 ORDER BY SUM(price) DESC;
-
+```
 ![Screen Shot 2023-06-27 at 10 02 34 AM](https://github.com/kevincombs08/8_week_sql_challenge/assets/126277909/e7afd40b-582b-4e5c-8247-d07729fa9576)
     
 -- 2. How many days has each customer visited the restaurant?
