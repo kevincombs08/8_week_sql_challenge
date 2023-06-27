@@ -80,9 +80,9 @@ SELECT
     ,ct
 FROM cte_1
 WHERE d_rnk = 1;
-
-![Screen Shot 2023-06-27 at 10 15 07 AM](https://github.com/kevincombs08/8_week_sql_challenge/assets/126277909/9beb625d-f83d-4a1d-92ac-f4b48fb878a8)
 ```
+![Screen Shot 2023-06-27 at 10 15 07 AM](https://github.com/kevincombs08/8_week_sql_challenge/assets/126277909/9beb625d-f83d-4a1d-92ac-f4b48fb878a8)
+
 -- 6. Which item was purchased first by the customer after they became a member?
 ```
 with cte_1 AS(
