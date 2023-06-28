@@ -1,4 +1,4 @@
--- Data Cleaning & Validation
+# -- Data Cleaning & Validation
 ------------------------------------------------------------------------------------------------
 ```
 SELECT * FROM runner_orders; 
@@ -40,7 +40,7 @@ MODIFY COLUMN order_time DATETIME;
 ``` 
 ------------------------------------------------------------------------------------------------
 
--- A. Pizza Metrics
+# -- A. Pizza Metrics
         
 -- 1. How many pizzas were ordered?
 ```
@@ -163,7 +163,7 @@ ORDER BY COUNT(order_id) DESC;
 ```
 ![Screen Shot 2023-06-27 at 11 11 41 AM](https://github.com/kevincombs08/8_week_sql_challenge/assets/126277909/230f678b-35b7-4dd9-bb37-59d9ccbfe877)
 
--- B. Runner and Customer Experience
+# -- B. Runner and Customer Experience
         
 -- 1. How many runners signed up for each 1 week period? (i.e. week starts 2021-01-01)
 ```
