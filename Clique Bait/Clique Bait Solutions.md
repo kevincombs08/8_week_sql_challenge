@@ -102,9 +102,13 @@ ORDER BY page_view DESC;
 -- Using a single SQL query - create a new output table which has the following details:
 
 -- How many times was each product viewed?
+
 -- How many times was each product added to cart?
+
 -- How many times was each product added to a cart but not purchased (abandoned)?
+
 -- How many times was each product purchased?
+
 ```    
 WITH page_stats AS(
 SELECT
@@ -456,15 +460,25 @@ ORDER BY CONCAT(ROUND(((purchases/add_to_carts)*100),2), '%') DESC;
 -- Generate a table that has 1 single row for every unique visit_id record and has the following columns:
 
 -- user_id
+
 -- visit_id
+
 -- visit_start_time: the earliest event_time for each visit
+
 -- page_views: count of page views for each visit
+
 -- cart_adds: count of product cart add events for each visit
+
 -- purchase: 1/0 flag if a purchase event exists for each visit
+
 -- campaign_name: map the visit to a campaign if the visit_start_time falls between the start_date and end_date
+
 -- impression: count of ad impressions for each visit
+
 -- click: count of ad clicks for each visit
+
 -- (Optional column) cart_products: a comma separated text value with products added to the cart sorted by the order they were added to the cart (hint: use the sequence_number)
+
 ```
 SELECT
 	u.user_id AS user_id
