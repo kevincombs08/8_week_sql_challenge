@@ -1,4 +1,4 @@
--- A. Customer Journey
+# -- A. Customer Journey
 
 -- Based off the 8 sample customers provided in the sample from the subscriptions table, write a brief description about each customer’s onboarding journey.
 ```
@@ -157,7 +157,7 @@ ORDER BY customer_id;
 
 ![Screen Shot 2023-06-28 at 10 11 40 AM](https://github.com/kevincombs08/8_week_sql_challenge/assets/126277909/e0c92d2d-8d2c-45de-b1d4-5bfdc20dd66b)
 
--- B. Data Analysis Questions
+# -- B. Data Analysis Questions
 
 -- How many customers has Foodie-Fi ever had?
 ```
