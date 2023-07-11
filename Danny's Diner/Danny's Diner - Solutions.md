@@ -9,8 +9,8 @@ FROM sales AS s
 GROUP BY customer_id
 ORDER BY SUM(price) DESC;
 ```
-![Screen Shot 2023-06-27 at 10 02 34 AM](https://github.com/kevincombs08/8_week_sql_challenge/assets/126277909/e7afd40b-582b-4e5c-8247-d07729fa9576)
-    
+![Screen Shot 2023-07-11 at 3 04 06 PM](https://github.com/kevincombs08/8_week_sql_challenge/assets/126277909/4b531146-3da5-4a43-8c9d-cdd72f744bb5)
+
 -- 2. How many days has each customer visited the restaurant?
 ```
  SELECT
