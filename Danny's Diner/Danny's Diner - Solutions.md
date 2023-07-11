@@ -20,7 +20,7 @@ FROM sales
 GROUP BY customer_id 
 ORDER BY COUNT(DISTINCT order_date) DESC; 
 ```
-![Screen Shot 2023-06-27 at 10 03 28 AM](https://github.com/kevincombs08/8_week_sql_challenge/assets/126277909/28453b56-1d80-4ba0-a289-2d36465c4934)
+![Screen Shot 2023-07-11 at 3 16 18 PM](https://github.com/kevincombs08/8_week_sql_challenge/assets/126277909/9502db4d-e7e2-4f73-b81b-eb0fffa914cd)
 
 -- 3. What was the first item from the menu purchased by each customer?
 ```
@@ -44,7 +44,7 @@ FROM cte_1
 WHERE rnk = 1
 GROUP BY 1,2,3;
 ```
-![Screen Shot 2023-06-27 at 10 12 23 AM](https://github.com/kevincombs08/8_week_sql_challenge/assets/126277909/ca36a0ee-d9df-436a-842e-7f8d8144d2c5)
+![Screen Shot 2023-07-11 at 3 16 41 PM](https://github.com/kevincombs08/8_week_sql_challenge/assets/126277909/e5362890-7feb-423b-8c0d-90a46584269b)
 
 -- 4. What is the most purchased item on the menu and how many times was it purchased by all customers?
 ```
@@ -58,7 +58,7 @@ GROUP BY product_name
 ORDER BY COUNT(*) DESC
 LIMIT 1;
 ```
-![Screen Shot 2023-06-27 at 10 13 44 AM](https://github.com/kevincombs08/8_week_sql_challenge/assets/126277909/a0a6bb7c-74ae-4afd-95a6-909eec1868d3)
+![Screen Shot 2023-07-11 at 3 35 47 PM](https://github.com/kevincombs08/8_week_sql_challenge/assets/126277909/d4376ba2-2c8f-44fe-aa2d-5f199843fa9d)
 
 -- 5. Which item was the most popular for each customer?
 ```
@@ -81,7 +81,7 @@ SELECT
 FROM cte_1
 WHERE d_rnk = 1;
 ```
-![Screen Shot 2023-06-27 at 10 15 07 AM](https://github.com/kevincombs08/8_week_sql_challenge/assets/126277909/9beb625d-f83d-4a1d-92ac-f4b48fb878a8)
+![Screen Shot 2023-07-11 at 3 36 03 PM](https://github.com/kevincombs08/8_week_sql_challenge/assets/126277909/a08c5979-6c3e-4fdf-98a0-e7a696b279e6)
 
 -- 6. Which item was purchased first by the customer after they became a member?
 ```
@@ -108,7 +108,7 @@ SELECT
 FROM cte_1
 WHERE d_rnk = 1;
 ```
-![Screen Shot 2023-06-27 at 10 16 05 AM](https://github.com/kevincombs08/8_week_sql_challenge/assets/126277909/d6aff483-b1eb-4d55-bec2-07e1015eda85)
+![Screen Shot 2023-07-11 at 3 37 12 PM](https://github.com/kevincombs08/8_week_sql_challenge/assets/126277909/01820018-ef00-4780-ac4c-aa3890926976)
 
 -- 7. Which item was purchased just before the customer became a member?
 ```
@@ -135,7 +135,7 @@ SELECT
 FROM cte_1
 WHERE d_rnk = 1;
 ```
-![Screen Shot 2023-06-27 at 10 16 44 AM](https://github.com/kevincombs08/8_week_sql_challenge/assets/126277909/5822e0da-cc5b-4a55-9ce4-1d81bf300cc4)
+![Screen Shot 2023-07-11 at 3 37 37 PM](https://github.com/kevincombs08/8_week_sql_challenge/assets/126277909/a0fcf1af-185c-47ff-9537-56fa64310af3)
 
 -- 8. What is the total items and amount spent for each member before they became a member?
 ```
@@ -159,7 +159,7 @@ SELECT
 FROM cte_1
 GROUP BY 1; 
 ```
-![Screen Shot 2023-06-27 at 10 17 13 AM](https://github.com/kevincombs08/8_week_sql_challenge/assets/126277909/34d35a20-62a9-48ba-9a12-53fd2406ad37)
+![Screen Shot 2023-07-11 at 3 38 45 PM](https://github.com/kevincombs08/8_week_sql_challenge/assets/126277909/e7c50f5a-7252-4da3-bd83-a5f55a5c2f68)
 
 -- 9.  If each $1 spent equates to 10 points and sushi has a 2x points multiplier - how many points would each customer have?
 ```
@@ -179,7 +179,7 @@ SELECT
 FROM cte_1
 GROUP BY 1; 
 ```
-![Screen Shot 2023-06-27 at 10 18 03 AM](https://github.com/kevincombs08/8_week_sql_challenge/assets/126277909/78ee1d19-cb0c-462a-b062-a9adad8ad2bc)
+![Screen Shot 2023-07-11 at 3 39 23 PM](https://github.com/kevincombs08/8_week_sql_challenge/assets/126277909/78be279b-6d0d-43d1-aa2e-27b80875ceab)
 
 -- 10. In the first week after a customer joins the program (including their join date) they earn 2x points on all items, not just sushi - how many points do customer A and B have at the end of January?
 ```
@@ -208,4 +208,5 @@ SELECT
 FROM cte_1
 GROUP BY 1;
 ```
-![Screen Shot 2023-06-27 at 10 18 40 AM](https://github.com/kevincombs08/8_week_sql_challenge/assets/126277909/eeb0b565-7c20-426b-b90d-2b7be76d91d3)
+![Screen Shot 2023-07-11 at 3 40 01 PM](https://github.com/kevincombs08/8_week_sql_challenge/assets/126277909/a6748aa6-c3ec-4648-b53d-73fd39c05741)
+
