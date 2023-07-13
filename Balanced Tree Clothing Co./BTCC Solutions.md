@@ -11,7 +11,7 @@ FROM bt_product_details AS pd
 GROUP BY 1
 ORDER BY SUM(s.qty) DESC; 
 ```
-![Screen Shot 2023-06-28 at 3 45 49 PM](https://github.com/kevincombs08/8_week_sql_challenge/assets/126277909/05796df8-aa38-46fe-96ba-6126cbea8b28)
+
 	
 -- What is the total generated revenue for all products before discounts?
 ```
@@ -24,7 +24,7 @@ FROM bt_product_details AS pd
 GROUP BY 1
 ORDER BY SUM(s.qty*s.price) DESC;
 ```
-![Screen Shot 2023-06-28 at 3 46 16 PM](https://github.com/kevincombs08/8_week_sql_challenge/assets/126277909/e8af7c60-beb2-44a5-a009-e40fb205ceff)
+
 
 -- What was the total discount amount for all products?
 ```
@@ -37,7 +37,7 @@ FROM bt_product_details AS pd
 GROUP BY 1 
 ORDER BY SUM(((s.qty*s.price*s.discount)/100)) DESC;
 ```
-![Screen Shot 2023-06-28 at 3 46 42 PM](https://github.com/kevincombs08/8_week_sql_challenge/assets/126277909/57ae7534-ddc0-4984-82db-ea3a1d0088a3)
+
 
 # -- Transaction Analysis
 
@@ -47,7 +47,7 @@ SELECT
 	COUNT(DISTINCT txn_id) AS unique_transactions
 FROM bt_sales;
 ```
-![Screen Shot 2023-06-28 at 3 46 56 PM](https://github.com/kevincombs08/8_week_sql_challenge/assets/126277909/d40a0c59-6bf8-4609-b449-ade3225cb88d)
+
 
 -- What is the average unique products purchased in each transaction?
 ```
@@ -61,7 +61,7 @@ SELECT
 	ROUND(AVG(total_qty),0) AS avg_qt
 FROM cte_1;
 ```
-![Screen Shot 2023-06-28 at 3 47 15 PM](https://github.com/kevincombs08/8_week_sql_challenge/assets/126277909/75f0fed7-8682-481e-abb3-28501afb4011)
+
 
 -- What is the average discount value per transaction?
 ```
@@ -76,7 +76,7 @@ SELECT
 FROM cte_1
 ORDER BY ROUND(AVG(discount),0) DESC;
 ```
-![Screen Shot 2023-06-28 at 3 47 30 PM](https://github.com/kevincombs08/8_week_sql_challenge/assets/126277909/69860f1a-5581-44d0-8f52-c150bb14ab8f)
+
 
 -- What is the percentage split of all transactions for members vs non-members?
 ```
@@ -91,7 +91,7 @@ SELECT
     ,CONCAT(ROUND(((nonmember/total_txn)*100),0), '%') AS nonmember_txn
 FROM cte_1; 
 ```
-![Screen Shot 2023-06-28 at 3 47 45 PM](https://github.com/kevincombs08/8_week_sql_challenge/assets/126277909/dd33e7ac-4035-45e4-86c7-64a1d2bca38b)
+
 
 -- What is the average revenue for member transactions and non-member transactions?
 ```
@@ -108,7 +108,7 @@ SELECT
 FROM cte_1
 GROUP BY 1;
 ```
-![Screen Shot 2023-06-28 at 3 48 04 PM](https://github.com/kevincombs08/8_week_sql_challenge/assets/126277909/529dddd8-f082-4294-a1f7-81cdf32950d8)
+
 
 # -- Product Analysis
 
@@ -124,7 +124,6 @@ GROUP BY 1
 ORDER BY SUM(s.qty*s.price) DESC
 LIMIT 3;
 ```
-![Screen Shot 2023-06-28 at 3 48 21 PM](https://github.com/kevincombs08/8_week_sql_challenge/assets/126277909/86e4b10e-704f-4c39-8052-2cd324c15876)
 
 -- What is the total quantity, revenue and discount for each segment?
 ```
@@ -138,7 +137,7 @@ FROM bt_sales AS s
 		ON pd.product_id = s.prod_id
 GROUP BY 1;
 ```
-![Screen Shot 2023-06-28 at 3 48 39 PM](https://github.com/kevincombs08/8_week_sql_challenge/assets/126277909/686fa4ad-f9c8-4f5f-bdf7-b2411218dde8)
+
 
 -- What is the top selling product for each segment?
 ```
@@ -160,7 +159,7 @@ SELECT
 FROM cte_1
 WHERE rnk = 1; 
 ```
-![Screen Shot 2023-06-28 at 3 48 54 PM](https://github.com/kevincombs08/8_week_sql_challenge/assets/126277909/939b9f14-a2b5-430a-937c-f479d483631b)
+
 
 -- What is the total quantity, revenue and discount for each category?
 ```
@@ -174,7 +173,7 @@ FROM bt_sales AS s
 		ON pd.product_id = s.prod_id
 GROUP BY 1;
 ```
-![Screen Shot 2023-06-28 at 3 49 37 PM](https://github.com/kevincombs08/8_week_sql_challenge/assets/126277909/0dd6bfcb-db6e-4efd-9968-e6b6f5b31bdf)
+
 
 -- What is the top selling product for each category?
 ```
@@ -196,7 +195,7 @@ SELECT
 FROM cte_1
 WHERE rnk = 1;
 ```
-![Screen Shot 2023-06-28 at 3 50 04 PM](https://github.com/kevincombs08/8_week_sql_challenge/assets/126277909/96250f8a-3679-4c16-af76-5a21173a3af3)
+
 
 -- What is the percentage split of revenue by product for each segment?
 ```
@@ -219,7 +218,7 @@ FROM cte_1
 GROUP BY 1,2,3
 ORDER BY 1,3 DESC;
 ```
-![Screen Shot 2023-06-28 at 3 50 23 PM](https://github.com/kevincombs08/8_week_sql_challenge/assets/126277909/1e329fc3-4db1-485a-9207-f6625cb176bc)
+
 
 -- What is the percentage split of revenue by segment for each category?
 ```
@@ -242,7 +241,7 @@ FROM cte_1
 GROUP BY 1,2,3
 ORDER BY 1,3 DESC;
 ```
-![Screen Shot 2023-06-28 at 3 50 38 PM](https://github.com/kevincombs08/8_week_sql_challenge/assets/126277909/ffbccc7d-5b16-4cfa-a44b-4d276c2c2d6e)
+
 
 -- What is the percentage split of total revenue by category?
 ```
@@ -262,7 +261,7 @@ FROM cte_1
 GROUP BY 1
 ORDER BY 3 DESC;
 ```	
-![Screen Shot 2023-06-28 at 3 51 10 PM](https://github.com/kevincombs08/8_week_sql_challenge/assets/126277909/2356ed5e-bff0-4425-b8b6-2dc78ee848a9)
+
 
 -- What is the total transaction “penetration” for each product? (hint: penetration = number of transactions where at least 1 quantity of a product was purchased divided by total number of transactions)
 ```
@@ -277,7 +276,6 @@ FROM bt_sales AS s
 GROUP BY 1
 ORDER BY 2 DESC;
 ```
-![Screen Shot 2023-06-28 at 3 51 30 PM](https://github.com/kevincombs08/8_week_sql_challenge/assets/126277909/d41f64ae-2064-44a6-9bea-c01fe428c2e8)
 
 -- What is the most common combination of at least 1 quantity of any 3 products in a 1 single transaction?
 ```
@@ -298,7 +296,7 @@ GROUP BY 1,2,3
 ORDER BY 4 DESC
 LIMIT 1;
 ```
-![Screen Shot 2023-06-28 at 3 51 48 PM](https://github.com/kevincombs08/8_week_sql_challenge/assets/126277909/650c9073-9f47-4733-ac60-c51455d12ba3)
+
 
 
 
