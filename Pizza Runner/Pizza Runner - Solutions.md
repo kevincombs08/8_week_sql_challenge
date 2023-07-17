@@ -47,14 +47,14 @@ MODIFY COLUMN order_time DATETIME;
 SELECT COUNT(order_id) AS pizza_count
 FROM customer_orders;
 ```
-![Screen Shot 2023-06-27 at 11 03 18 AM](https://github.com/kevincombs08/8_week_sql_challenge/assets/126277909/e0794b30-5598-4316-b54a-74e3f6c01a7e)
+![Screen Shot 2023-07-17 at 4 08 07 PM](https://github.com/kevincombs08/8_week_sql_challenge/assets/126277909/4bd41343-1522-44e2-b4fc-a2f9c81f84a5)
 
 -- 2. How many unique customer orders were made?
 ```
 SELECT COUNT(distinct order_id) AS distinct_order
 FROM customer_orders;  
 ```
-![Screen Shot 2023-06-27 at 11 03 43 AM](https://github.com/kevincombs08/8_week_sql_challenge/assets/126277909/26eac0d3-c74b-487d-bf21-f49f6ef38386)
+![Screen Shot 2023-07-17 at 4 08 22 PM](https://github.com/kevincombs08/8_week_sql_challenge/assets/126277909/b910c18f-1971-4c2d-945e-96fa3587ad62)
 
 -- 3. How many successful orders were delivered by each runner?
 ```
@@ -64,7 +64,7 @@ FROM runner_orders
 WHERE cancellation IS NULL
 GROUP BY 1;
 ```
-![Screen Shot 2023-06-27 at 11 05 22 AM](https://github.com/kevincombs08/8_week_sql_challenge/assets/126277909/fe524c2e-c5d3-4c97-9ae7-a72fa835cc25)
+![Screen Shot 2023-07-17 at 4 08 52 PM](https://github.com/kevincombs08/8_week_sql_challenge/assets/126277909/dc777ce1-51ca-4b94-9ddb-f418d596b4ca)
 
 -- 4. How many of each type of pizza was delivered?
 ```
@@ -78,7 +78,7 @@ FROM customer_orders AS co
 WHERE ro.cancellation IS NULL
 GROUP BY 1; 
 ```
-![Screen Shot 2023-06-27 at 11 06 44 AM](https://github.com/kevincombs08/8_week_sql_challenge/assets/126277909/ee673276-857f-4c66-be27-cde0a6d23aa1)
+![Screen Shot 2023-07-17 at 4 09 47 PM](https://github.com/kevincombs08/8_week_sql_challenge/assets/126277909/6ee49015-b10c-43c7-bd4e-0d1b45ccd6fc)
 
 -- 5. How many Vegetarian and Meatlovers were ordered by each customer?
 ```
@@ -91,7 +91,7 @@ FROM customer_orders AS co
 GROUP BY 1,2
 ORDER BY customer_id;
 ```
-![Screen Shot 2023-06-27 at 11 07 18 AM](https://github.com/kevincombs08/8_week_sql_challenge/assets/126277909/cd3d457a-6113-4c98-b693-596711d27ff2)
+![Screen Shot 2023-07-17 at 4 10 02 PM](https://github.com/kevincombs08/8_week_sql_challenge/assets/126277909/afe68dc6-50a0-42bc-9b47-b754d1a91dc5)
 
 -- 6. What was the maximum number of pizzas delivered in a single order?
 ```
@@ -104,7 +104,7 @@ GROUP BY 1)
 SELECT MAX(pizza_count) AS pizza_count
 FROM cte_1;
 ```
-![Screen Shot 2023-06-27 at 11 09 39 AM](https://github.com/kevincombs08/8_week_sql_challenge/assets/126277909/64a40443-a79d-4c82-96e7-fcd7d8ea045b)
+![Screen Shot 2023-07-17 at 4 10 18 PM](https://github.com/kevincombs08/8_week_sql_challenge/assets/126277909/71ba92b5-6bac-456b-be72-060cbf3d970c)
 
 -- 7. For each customer, how many delivered pizzas had at least 1 change and how many had no changes?
 ```
@@ -121,7 +121,7 @@ FROM customer_orders AS co
 WHERE ro.cancellation IS NULL 
 GROUP BY 1;
 ```
-![Screen Shot 2023-06-27 at 11 10 03 AM](https://github.com/kevincombs08/8_week_sql_challenge/assets/126277909/f85b0f4f-2116-4a93-b3bd-14faf6d670f5)
+![Screen Shot 2023-07-17 at 4 10 33 PM](https://github.com/kevincombs08/8_week_sql_challenge/assets/126277909/812d8b74-a315-4ab5-90d6-6b1fd3068d59)
 
 -- 8. How many pizzas were delivered that had both exclusions and extras?
 ```
@@ -133,7 +133,7 @@ FROM customer_orders AS co
 		ON co.order_id = ro.order_id
 WHERE ro.cancellation IS NULL;
 ```
-![Screen Shot 2023-06-27 at 11 10 22 AM](https://github.com/kevincombs08/8_week_sql_challenge/assets/126277909/ec101907-3b03-4b64-a318-ddee3b068417)
+![Screen Shot 2023-07-17 at 4 10 49 PM](https://github.com/kevincombs08/8_week_sql_challenge/assets/126277909/1b663940-14da-4242-9f37-4aa309bcee33)
 
 -- 9. What was the total volume of pizzas ordered for each hour of the day?
 ```
@@ -143,7 +143,7 @@ FROM customer_orders
 GROUP BY 1
 ORDER BY EXTRACT(HOUR FROM order_time); 
 ```
-![Screen Shot 2023-06-27 at 11 11 03 AM](https://github.com/kevincombs08/8_week_sql_challenge/assets/126277909/4f201b29-dc86-4a65-989f-cccf250488a4)
+![Screen Shot 2023-07-17 at 4 11 05 PM](https://github.com/kevincombs08/8_week_sql_challenge/assets/126277909/de173448-201c-4751-b492-23f55101feb7)
 
 -- 10. What was the volume of orders for each day of the week?
 ```
@@ -161,7 +161,7 @@ FROM customer_orders
 GROUP BY 1
 ORDER BY COUNT(order_id) DESC;
 ```
-![Screen Shot 2023-06-27 at 11 11 41 AM](https://github.com/kevincombs08/8_week_sql_challenge/assets/126277909/230f678b-35b7-4dd9-bb37-59d9ccbfe877)
+![Screen Shot 2023-07-17 at 4 11 26 PM](https://github.com/kevincombs08/8_week_sql_challenge/assets/126277909/7dbaf541-5997-4bc6-8329-1e268dc2a5e0)
 
 # -- B. Runner and Customer Experience
         
@@ -174,7 +174,7 @@ FROM runners
 GROUP BY YEARWEEK(registration_date)
 ORDER BY COUNT(*) DESC;
 ```
-![Screen Shot 2023-06-27 at 11 12 28 AM](https://github.com/kevincombs08/8_week_sql_challenge/assets/126277909/88cf6186-2ac9-45f8-84ef-ede7261c878b)
+![Screen Shot 2023-07-17 at 4 11 42 PM](https://github.com/kevincombs08/8_week_sql_challenge/assets/126277909/382c66a6-012f-4428-9c54-f32a7d35bfcb)
 
 -- 2. What was the average time in minutes it took for each runner to arrive at the Pizza Runner HQ to pickup the order?
 ```
@@ -196,7 +196,7 @@ SELECT
 FROM cte_1
 GROUP BY runner_id;
 ```
-![Screen Shot 2023-06-27 at 11 12 50 AM](https://github.com/kevincombs08/8_week_sql_challenge/assets/126277909/4d1df309-db36-4684-a414-b5f5e1fc71d6)
+![Screen Shot 2023-07-17 at 4 12 09 PM](https://github.com/kevincombs08/8_week_sql_challenge/assets/126277909/f9e5953b-6207-4423-b569-2f9b5ce75d3d)
 
 -- 3. Is there any relationship between the number of pizzas and how long the order takes to prepare?
 ```
@@ -221,7 +221,7 @@ SELECT
 FROM cte_1 
 GROUP BY pizza_count;
 ```
-![Screen Shot 2023-06-27 at 11 13 48 AM](https://github.com/kevincombs08/8_week_sql_challenge/assets/126277909/0d37bb9b-461b-4dc6-ab31-687bee605dd0)
+![Screen Shot 2023-07-17 at 4 12 24 PM](https://github.com/kevincombs08/8_week_sql_challenge/assets/126277909/4bbd107e-70f2-41e9-b5a0-ff15370ef3d6)
 
 -- 4. What was the average distance travelled for each customer?
 ```
@@ -235,7 +235,7 @@ WHERE ro.pickup_time IS NOT NULL
 GROUP BY co.customer_id
 ORDER BY ROUND(AVG(distance),0) DESC;
 ```
-![Screen Shot 2023-06-27 at 11 14 08 AM](https://github.com/kevincombs08/8_week_sql_challenge/assets/126277909/e68147f5-fdc7-4d85-8ce0-ba015e6589e2)
+![Screen Shot 2023-07-17 at 4 12 43 PM](https://github.com/kevincombs08/8_week_sql_challenge/assets/126277909/20005f26-edc3-482a-a760-906f27e9033b)
 
 -- 5. What was the difference between the longest and shortest delivery times for all orders?
 ```
@@ -243,7 +243,7 @@ SELECT
     MAX(duration) - MIN(duration) AS time_diff
 FROM runner_orders;
 ```
-![Screen Shot 2023-06-27 at 11 14 32 AM](https://github.com/kevincombs08/8_week_sql_challenge/assets/126277909/8f1b6ccd-9d5d-4dae-b527-d80daa654b42)
+![Screen Shot 2023-07-17 at 4 13 01 PM](https://github.com/kevincombs08/8_week_sql_challenge/assets/126277909/4678b7a9-f3f1-4c2a-8da6-82accb89d746)
 
 -- 6. What was the average speed for each runner for each delivery and do you notice any trend for these values?
 ```
@@ -261,7 +261,7 @@ WHERE cancellation IS NULL
 GROUP BY 1,2,4,5,6
 ORDER BY runner_id;
 ```
-![Screen Shot 2023-06-27 at 11 15 00 AM](https://github.com/kevincombs08/8_week_sql_challenge/assets/126277909/e614be6a-8406-4400-97cf-09a200ecebf4)
+![Screen Shot 2023-07-17 at 4 13 18 PM](https://github.com/kevincombs08/8_week_sql_challenge/assets/126277909/5d40ec0b-a6fe-4316-8ca6-0d8f9749d740)
 
 -- 7. What is the successful delivery percentage for each runner?
 ```
@@ -280,4 +280,6 @@ SELECT
 FROM cte_1
 ORDER BY runner_id;
 ```
-![Screen Shot 2023-06-27 at 11 15 32 AM](https://github.com/kevincombs08/8_week_sql_challenge/assets/126277909/cd52911b-cb31-4129-9e5c-ccfcd2d4da19)
+![Screen Shot 2023-07-17 at 4 13 35 PM](https://github.com/kevincombs08/8_week_sql_challenge/assets/126277909/f0dc5e0c-b021-4e0d-a90d-3b552448a972)
+
+
