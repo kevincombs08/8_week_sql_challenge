@@ -11,8 +11,8 @@ FROM bt_product_details AS pd
 GROUP BY 1
 ORDER BY SUM(s.qty) DESC; 
 ```
+![Screen Shot 2023-07-17 at 11 53 54 AM](https://github.com/kevincombs08/8_week_sql_challenge/assets/126277909/44d983e1-02a8-40b3-89e6-cb40359cd664)
 
-	
 -- What is the total generated revenue for all products before discounts?
 ```
 SELECT
@@ -24,7 +24,7 @@ FROM bt_product_details AS pd
 GROUP BY 1
 ORDER BY SUM(s.qty*s.price) DESC;
 ```
-
+![Screen Shot 2023-07-17 at 11 54 20 AM](https://github.com/kevincombs08/8_week_sql_challenge/assets/126277909/f072dca6-da09-447c-9fdc-70ee9a5a7028)
 
 -- What was the total discount amount for all products?
 ```
