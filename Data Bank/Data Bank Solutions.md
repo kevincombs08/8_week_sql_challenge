@@ -6,7 +6,7 @@ SELECT
 	COUNT(DISTINCT node_id) AS node_count
 FROM customer_nodes;
 ```
-![Screen Shot 2023-06-28 at 11 18 57 AM](https://github.com/kevincombs08/8_week_sql_challenge/assets/126277909/5d3865e3-87ec-4c9d-b800-8dd09a2c2cee)
+![Screen Shot 2023-07-17 at 3 29 15 PM](https://github.com/kevincombs08/8_week_sql_challenge/assets/126277909/4a577c88-43f2-4e3e-a75e-7d451d712c22)
 
 -- What is the number of nodes per region?
 ```
@@ -19,7 +19,7 @@ FROM regions AS r
 GROUP BY region_name
 ORDER BY num_nodes DESC;
 ```
-![Screen Shot 2023-06-28 at 11 19 16 AM](https://github.com/kevincombs08/8_week_sql_challenge/assets/126277909/12cc5a74-e3d9-4a43-9bd5-a38e69658591)
+![Screen Shot 2023-07-17 at 3 29 37 PM](https://github.com/kevincombs08/8_week_sql_challenge/assets/126277909/402b60a4-5cf9-4178-a688-c115ccf5af7b)
 
 -- How many customers are allocated to each region?
 ```
@@ -32,7 +32,7 @@ FROM regions AS r
 GROUP BY region_name
 ORDER BY num_customer DESC;
 ```
-![Screen Shot 2023-06-28 at 11 19 33 AM](https://github.com/kevincombs08/8_week_sql_challenge/assets/126277909/d78cf490-e739-4269-a4d7-40f13d9f3781)
+![Screen Shot 2023-07-17 at 3 29 52 PM](https://github.com/kevincombs08/8_week_sql_challenge/assets/126277909/5d3056e8-6836-4318-9cca-189e0aaececf)
 
 -- How many days on average are customers reallocated to a different node?
 ```
@@ -41,7 +41,7 @@ SELECT
 FROM customer_nodes
 WHERE end_date != '9999-12-31';
 ```
-![Screen Shot 2023-06-28 at 11 19 51 AM](https://github.com/kevincombs08/8_week_sql_challenge/assets/126277909/27a8c07f-cafa-4d13-9dfd-1b5d707e1cf7)
+![Screen Shot 2023-07-17 at 3 30 13 PM](https://github.com/kevincombs08/8_week_sql_challenge/assets/126277909/c4e5ee9c-81d8-4d50-b545-0ab5f0e1acf7)
 
 -- What is the median, 80th and 95th percentile for this same reallocation days metric for each region?
 ```
@@ -70,7 +70,7 @@ SELECT
 FROM cte_1
 GROUP BY 1;
 ```
-![Screen Shot 2023-06-28 at 11 20 16 AM](https://github.com/kevincombs08/8_week_sql_challenge/assets/126277909/aa1b8e76-a371-4099-bc8e-da35aafccd00)
+![Screen Shot 2023-07-17 at 3 31 09 PM](https://github.com/kevincombs08/8_week_sql_challenge/assets/126277909/c97b21f5-eff7-4740-a977-927be24a1a08)
 
 # -- B. Customer Transactions
 
@@ -83,7 +83,7 @@ SELECT
 FROM customer_transactions
 GROUP BY 1;
 ```
-![Screen Shot 2023-06-28 at 11 20 31 AM](https://github.com/kevincombs08/8_week_sql_challenge/assets/126277909/1cae8891-777f-4a58-8b1c-fd3ec6cab661)
+![Screen Shot 2023-07-17 at 3 31 28 PM](https://github.com/kevincombs08/8_week_sql_challenge/assets/126277909/783b601d-b56b-420d-80db-4b003e1a37db)
 
 -- What is the average total historical deposit counts and amounts for all customers?
 ```
@@ -100,7 +100,7 @@ SELECT
     ,ROUND(AVG(deposit_amount),2) AS avg_amount
 FROM cte_1;
 ```
-![Screen Shot 2023-06-28 at 11 21 02 AM](https://github.com/kevincombs08/8_week_sql_challenge/assets/126277909/8e0700e1-2365-48f1-8586-12f5b01f104f)
+![Screen Shot 2023-07-17 at 3 32 07 PM](https://github.com/kevincombs08/8_week_sql_challenge/assets/126277909/9222dad4-26db-4d3e-baab-4581b0851b10)
 
 -- For each month - how many Data Bank customers make more than 1 deposit and either 1 purchase or 1 withdrawal in a single month?
 ```
@@ -121,7 +121,7 @@ WHERE deposit_ct > 1 AND (purchase_ct = 1 OR with_ct = 1)
 GROUP BY 1
 ORDER BY 1;
 ```
-![Screen Shot 2023-06-28 at 11 21 34 AM](https://github.com/kevincombs08/8_week_sql_challenge/assets/126277909/8f2150b0-ff08-48e2-82d2-5d908b4f6103)
+![Screen Shot 2023-07-17 at 3 32 46 PM](https://github.com/kevincombs08/8_week_sql_challenge/assets/126277909/6cd77c1d-b0ef-4991-b924-28b139c8379d)
 
 -- What is the closing balance for each customer at the end of the month?
 ```
@@ -143,7 +143,7 @@ SELECT
 FROM cte_1 
 GROUP BY 1,2;
 ```
-![Screen Shot 2023-06-28 at 11 24 11 AM](https://github.com/kevincombs08/8_week_sql_challenge/assets/126277909/b32cbb16-6e42-490c-b774-2d1402345d40)
+![Screen Shot 2023-07-17 at 3 33 12 PM](https://github.com/kevincombs08/8_week_sql_challenge/assets/126277909/f274b462-cba4-454d-b175-d6df13570a63)
 
 -- What is the percentage of customers who increase their closing balance by more than 5%?
 ```
@@ -183,6 +183,7 @@ SELECT
     (SELECT COUNT(DISTINCT customer_id) FROM customer_transactions)*100),0),'%') AS pct_over_5
 FROM cte_4;
 ```
-![Screen Shot 2023-06-28 at 11 24 31 AM](https://github.com/kevincombs08/8_week_sql_challenge/assets/126277909/f3015bbd-1adc-4bc8-aa9a-68464feddccc)
+![Screen Shot 2023-07-17 at 3 36 10 PM](https://github.com/kevincombs08/8_week_sql_challenge/assets/126277909/6ff33743-2e08-4228-bb50-8dea268fa7e5)
+
 
 
