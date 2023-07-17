@@ -28,8 +28,7 @@ WHERE customer_id = '2'
 ORDER BY customer_id;
 ```
 -- This customer signed up for the trial plan on September 20th, 2020 and tested it for 7 days before signing up for the pro annual plan on September 27th, 2020. 
-
-![Screen Shot 2023-06-28 at 9 30 37 AM](https://github.com/kevincombs08/8_week_sql_challenge/assets/126277909/40e1250e-6728-4028-b758-9349c82624f6)
+![Screen Shot 2023-07-17 at 3 56 13 PM](https://github.com/kevincombs08/8_week_sql_challenge/assets/126277909/3b29edeb-cd71-49fc-8602-596eb32e92f3)
 
 -- customer_id = 206
 ```
@@ -46,8 +45,7 @@ WHERE customer_id = '206'
 ORDER BY customer_id;
 ```
 -- This customer signed up for the trial on March 17th, 2020 and tested it for 7 days before signing up for the basic monthly plan on March 24th, 2020. 6 months later, this customer upgraded to the pro annual plan. 
-
-![Screen Shot 2023-06-28 at 9 40 43 AM](https://github.com/kevincombs08/8_week_sql_challenge/assets/126277909/274273ed-f0a1-4e44-8f71-290fccf31036)
+![Screen Shot 2023-07-17 at 3 56 32 PM](https://github.com/kevincombs08/8_week_sql_challenge/assets/126277909/13cefe08-19fd-4e2c-b0d4-93861352d7f6)
 
 -- customer_id = 494
 ```
@@ -64,8 +62,7 @@ WHERE customer_id = '494'
 ORDER BY customer_id;
 ```
 -- This customer signed up for the trial on July 18th, 2020. 7 days later, they signed up for the pro monthly tier. 6 months later, this customer cancelled their services.
-
-![Screen Shot 2023-06-28 at 9 45 43 AM](https://github.com/kevincombs08/8_week_sql_challenge/assets/126277909/3c6e12b4-1c29-4571-975a-ba158dfcd166)
+![Screen Shot 2023-07-17 at 3 56 51 PM](https://github.com/kevincombs08/8_week_sql_challenge/assets/126277909/83f71fe4-d1aa-49dd-8c98-2228536be53a)
 
 -- customer_id = 790
 ```
@@ -82,8 +79,7 @@ WHERE customer_id = '790'
 ORDER BY customer_id;
 ```
 -- This customer signed up for the trial on March 10th, 2020 and converted to the basic monthly plan 7 days later on March 17th, 2020.
-
-![Screen Shot 2023-06-28 at 9 50 16 AM](https://github.com/kevincombs08/8_week_sql_challenge/assets/126277909/89bef358-4dcc-4f95-8349-036154f4bbcc)
+![Screen Shot 2023-07-17 at 3 57 13 PM](https://github.com/kevincombs08/8_week_sql_challenge/assets/126277909/9fe0e124-3e5f-4524-a9d9-cc7a3d3c1df2)
 
 -- customer_id = 805
 ```
@@ -100,8 +96,7 @@ WHERE customer_id = '805'
 ORDER BY customer_id;
 ```
 -- This customer signed up for the trial on April 2nd, 2020 and upgraded to the basic monthly plan on April 9th, 2020. 5 months later, this customer upgraded to the pro monthly on September 2nd, 2020. 
-
-![Screen Shot 2023-06-28 at 9 53 20 AM](https://github.com/kevincombs08/8_week_sql_challenge/assets/126277909/a25e364a-91a7-4c41-992b-95f6527ae4cf)
+![Screen Shot 2023-07-17 at 3 57 33 PM](https://github.com/kevincombs08/8_week_sql_challenge/assets/126277909/f7140a3d-2b26-4acb-85aa-8be691738a4a)
 
 -- customer_id = 810
 ```
@@ -118,8 +113,7 @@ WHERE customer_id = '810'
 ORDER BY customer_id;
 ```
 -- This customer signed up for the trial plan on November 22, 2020 and upgraded to the basic monthly 7 days later. A few short days later on December 2, 2020 they cancelled their account.
-
-![Screen Shot 2023-06-28 at 9 56 09 AM](https://github.com/kevincombs08/8_week_sql_challenge/assets/126277909/345bbd25-f10a-415e-b44d-be3fcef62e9b)
+![Screen Shot 2023-07-17 at 3 57 51 PM](https://github.com/kevincombs08/8_week_sql_challenge/assets/126277909/bfd0429b-807b-4822-94a8-e72941a83d16)
 
 -- customer_id = 974
 ```
@@ -136,8 +130,7 @@ WHERE customer_id = '974'
 ORDER BY customer_id;
 ```
 -- This customer signed up for the trial on September 10th, 2020 and 7 days later signed up for the basic monthly plan. A month later, they upgraded to the pro annual plan.
-
-![Screen Shot 2023-06-28 at 10 05 52 AM](https://github.com/kevincombs08/8_week_sql_challenge/assets/126277909/ba9c0904-7a03-4de5-9227-69c6e7db1912)
+![Screen Shot 2023-07-17 at 3 58 11 PM](https://github.com/kevincombs08/8_week_sql_challenge/assets/126277909/8188ac85-6d13-4b01-821e-c7fba0174814)
 
 -- customer_id = 549
 ```
@@ -154,8 +147,7 @@ WHERE customer_id = '549'
 ORDER BY customer_id;
 ```
 -- This customer signed up for the trial plan on October 7th 2020 and 7 days later upgraded to the basic monthly. 3 months later, this customer upgraded to the pro monthly plan.
-
-![Screen Shot 2023-06-28 at 10 11 40 AM](https://github.com/kevincombs08/8_week_sql_challenge/assets/126277909/e0c92d2d-8d2c-45de-b1d4-5bfdc20dd66b)
+![Screen Shot 2023-07-17 at 3 58 32 PM](https://github.com/kevincombs08/8_week_sql_challenge/assets/126277909/a1c59ec1-1e1a-44e7-945f-de264b2525bc)
 
 # -- B. Data Analysis Questions
 
@@ -165,7 +157,7 @@ SELECT
 	COUNT(distinct customer_id) AS customers
 FROM subscriptions;
 ```
-![Screen Shot 2023-06-28 at 10 25 08 AM](https://github.com/kevincombs08/8_week_sql_challenge/assets/126277909/492033f3-e1da-4411-8f21-91c5ece405b0)
+![Screen Shot 2023-07-17 at 3 58 51 PM](https://github.com/kevincombs08/8_week_sql_challenge/assets/126277909/670c78a7-00b1-458e-bd66-fcf19005685e)
 
 -- What plan start_date values occur after the year 2020 for our dataset? Show the breakdown by count of events for each plan_name
 ```
@@ -182,7 +174,7 @@ FROM subscriptions AS sub
 		ON pl.plan_id = sub.plan_id
 GROUP BY 1;
 ```
-![Screen Shot 2023-06-28 at 10 25 54 AM](https://github.com/kevincombs08/8_week_sql_challenge/assets/126277909/5852b7f1-d793-4308-a8a8-5ec810cf9785)
+![Screen Shot 2023-07-17 at 3 59 09 PM](https://github.com/kevincombs08/8_week_sql_challenge/assets/126277909/99a28d88-0a10-4ee3-8ed1-8142b7ce9cc3)
 
 -- What is the customer count and percentage of customers who have churned rounded to 1 decimal place?
 ```
@@ -200,7 +192,7 @@ SELECT
 	,CONCAT(ROUND(((churn_count/total_cust)*100),1),'%') AS churn_perc
 FROM cte_1;
 ```
-![Screen Shot 2023-06-28 at 10 26 17 AM](https://github.com/kevincombs08/8_week_sql_challenge/assets/126277909/ab8cdf9b-15c5-4ed0-86a3-15a5bb45c1db)
+![Screen Shot 2023-07-17 at 3 59 28 PM](https://github.com/kevincombs08/8_week_sql_challenge/assets/126277909/44198a4b-5282-4be1-a4cd-325aad07e87e)
 
 -- How many customers have churned straight after their initial free trial - what percentage is this rounded to the nearest whole number?
 ```
@@ -224,8 +216,8 @@ FROM cte_1
 WHERE plan_id = 4
 AND plan_row = 2;
 ```
-![Screen Shot 2023-06-28 at 10 28 36 AM](https://github.com/kevincombs08/8_week_sql_challenge/assets/126277909/b3964773-7efd-4803-98a7-9bf3dea5278f)
- 
+![Screen Shot 2023-07-17 at 4 00 11 PM](https://github.com/kevincombs08/8_week_sql_challenge/assets/126277909/7bc5bf8e-495c-4cb0-8630-3ffa12351182)
+
 -- What is the number and percentage of customer plans after their initial free trial?
 ```
 WITH cte_1 AS(
@@ -249,8 +241,7 @@ WHERE plan_id = 0
 AND next_plan !=4
 GROUP BY 1;
 ```
-
-![Screen Shot 2023-06-28 at 10 30 38 AM](https://github.com/kevincombs08/8_week_sql_challenge/assets/126277909/b5c01efa-2e9c-423c-851a-c9219a2e4e40)
+![Screen Shot 2023-07-17 at 4 00 29 PM](https://github.com/kevincombs08/8_week_sql_challenge/assets/126277909/27f73135-6a77-4bc8-b4a0-f1d4f6c5f8e2)
 
 -- What is the customer count and percentage breakdown of all 5 plan_name values at 2020-12-31?
 ```
@@ -278,14 +269,12 @@ GROUP BY 1)
 SELECT
 	plan_id
     ,customers
-    ,CONCAT(ROUND((customers/
-					(SELECT COUNT(DISTINCT customer_id)
-						FROM subscriptions)*100),0),'%') AS customer_perc
+    ,CONCAT(ROUND((customers/(SELECT COUNT(DISTINCT customer_id)
+FROM subscriptions)*100),0),'%') AS customer_perc
 FROM customer_plans
 GROUP BY 1,2; 
 ```
-![Screen Shot 2023-06-28 at 10 44 28 AM](https://github.com/kevincombs08/8_week_sql_challenge/assets/126277909/ccbbce0f-888c-4795-8765-264c327d324b)
-
+![Screen Shot 2023-07-17 at 4 00 46 PM](https://github.com/kevincombs08/8_week_sql_challenge/assets/126277909/e14f854b-12a5-4ed0-ad82-e4108981cd68)
 
 -- How many customers have upgraded to an annual plan in 2020?
 ```
@@ -295,7 +284,7 @@ FROM subscriptions
 WHERE plan_id = 3
 AND start_date < '2020-12-31';
 ```
-![Screen Shot 2023-06-28 at 10 45 34 AM](https://github.com/kevincombs08/8_week_sql_challenge/assets/126277909/aa832578-670d-4e85-aea9-15f90ea182f3)
+![Screen Shot 2023-07-17 at 4 01 18 PM](https://github.com/kevincombs08/8_week_sql_challenge/assets/126277909/e321b7ff-b0cc-4599-8262-bf148df0b599)
 
 -- How many days on average does it take for a customer to an annual plan from the day they join Foodie-Fi?
 ```
@@ -315,7 +304,7 @@ ROUND(AVG(DATEDIFF(annual_start,trial_start)),0) AS date_diff
 FROM cte_1
 WHERE annual_start IS NOT NULL;
 ```
-![Screen Shot 2023-06-28 at 10 52 04 AM](https://github.com/kevincombs08/8_week_sql_challenge/assets/126277909/c2ba096e-6dc4-4921-b7ea-8acb7805fccd)
+![Screen Shot 2023-07-17 at 4 01 34 PM](https://github.com/kevincombs08/8_week_sql_challenge/assets/126277909/d4e620d6-3886-465b-b3ab-08226963fe73)
 
 -- Can you further breakdown this average value into 30 day periods (i.e. 0-30 days, 31-60 days etc)
 ```
@@ -348,7 +337,7 @@ FROM buckets
 GROUP BY bucket_days
 ORDER BY bucket_days ASC;
 ```
-![Screen Shot 2023-06-28 at 10 55 12 AM](https://github.com/kevincombs08/8_week_sql_challenge/assets/126277909/fd2b0418-1579-4382-9524-2293d1ed9bff)
+![Screen Shot 2023-07-17 at 4 01 51 PM](https://github.com/kevincombs08/8_week_sql_challenge/assets/126277909/b32d7090-17b7-4820-81ad-0c027d18dc2e)
 
 -- How many customers downgraded from a pro monthly to a basic monthly plan in 2020?
 ```
@@ -366,5 +355,4 @@ WHERE start_date <= '2020-12-31'
 AND plan_id = 2
 AND next_plan = 1;
 ```
-![Screen Shot 2023-06-28 at 10 56 10 AM](https://github.com/kevincombs08/8_week_sql_challenge/assets/126277909/703371ca-4ccb-44bc-b32d-a50d956be571)
-
+![Screen Shot 2023-07-17 at 4 02 10 PM](https://github.com/kevincombs08/8_week_sql_challenge/assets/126277909/24bfb13c-e10e-4c05-bc23-288086b11663)
