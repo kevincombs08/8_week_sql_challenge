@@ -28,6 +28,7 @@ WHERE customer_id = '2'
 ORDER BY customer_id;
 ```
 -- This customer signed up for the trial plan on September 20th, 2020 and tested it for 7 days before signing up for the pro annual plan on September 27th, 2020. 
+
 ![Screen Shot 2023-07-17 at 3 56 13 PM](https://github.com/kevincombs08/8_week_sql_challenge/assets/126277909/3b29edeb-cd71-49fc-8602-596eb32e92f3)
 
 -- customer_id = 206
@@ -45,6 +46,7 @@ WHERE customer_id = '206'
 ORDER BY customer_id;
 ```
 -- This customer signed up for the trial on March 17th, 2020 and tested it for 7 days before signing up for the basic monthly plan on March 24th, 2020. 6 months later, this customer upgraded to the pro annual plan. 
+
 ![Screen Shot 2023-07-17 at 3 56 32 PM](https://github.com/kevincombs08/8_week_sql_challenge/assets/126277909/13cefe08-19fd-4e2c-b0d4-93861352d7f6)
 
 -- customer_id = 494
@@ -62,6 +64,7 @@ WHERE customer_id = '494'
 ORDER BY customer_id;
 ```
 -- This customer signed up for the trial on July 18th, 2020. 7 days later, they signed up for the pro monthly tier. 6 months later, this customer cancelled their services.
+
 ![Screen Shot 2023-07-17 at 3 56 51 PM](https://github.com/kevincombs08/8_week_sql_challenge/assets/126277909/83f71fe4-d1aa-49dd-8c98-2228536be53a)
 
 -- customer_id = 790
@@ -79,6 +82,7 @@ WHERE customer_id = '790'
 ORDER BY customer_id;
 ```
 -- This customer signed up for the trial on March 10th, 2020 and converted to the basic monthly plan 7 days later on March 17th, 2020.
+
 ![Screen Shot 2023-07-17 at 3 57 13 PM](https://github.com/kevincombs08/8_week_sql_challenge/assets/126277909/9fe0e124-3e5f-4524-a9d9-cc7a3d3c1df2)
 
 -- customer_id = 805
@@ -96,6 +100,7 @@ WHERE customer_id = '805'
 ORDER BY customer_id;
 ```
 -- This customer signed up for the trial on April 2nd, 2020 and upgraded to the basic monthly plan on April 9th, 2020. 5 months later, this customer upgraded to the pro monthly on September 2nd, 2020. 
+
 ![Screen Shot 2023-07-17 at 3 57 33 PM](https://github.com/kevincombs08/8_week_sql_challenge/assets/126277909/f7140a3d-2b26-4acb-85aa-8be691738a4a)
 
 -- customer_id = 810
@@ -113,6 +118,7 @@ WHERE customer_id = '810'
 ORDER BY customer_id;
 ```
 -- This customer signed up for the trial plan on November 22, 2020 and upgraded to the basic monthly 7 days later. A few short days later on December 2, 2020 they cancelled their account.
+
 ![Screen Shot 2023-07-17 at 3 57 51 PM](https://github.com/kevincombs08/8_week_sql_challenge/assets/126277909/bfd0429b-807b-4822-94a8-e72941a83d16)
 
 -- customer_id = 974
@@ -130,6 +136,7 @@ WHERE customer_id = '974'
 ORDER BY customer_id;
 ```
 -- This customer signed up for the trial on September 10th, 2020 and 7 days later signed up for the basic monthly plan. A month later, they upgraded to the pro annual plan.
+
 ![Screen Shot 2023-07-17 at 3 58 11 PM](https://github.com/kevincombs08/8_week_sql_challenge/assets/126277909/8188ac85-6d13-4b01-821e-c7fba0174814)
 
 -- customer_id = 549
@@ -147,6 +154,7 @@ WHERE customer_id = '549'
 ORDER BY customer_id;
 ```
 -- This customer signed up for the trial plan on October 7th 2020 and 7 days later upgraded to the basic monthly. 3 months later, this customer upgraded to the pro monthly plan.
+
 ![Screen Shot 2023-07-17 at 3 58 32 PM](https://github.com/kevincombs08/8_week_sql_challenge/assets/126277909/a1c59ec1-1e1a-44e7-945f-de264b2525bc)
 
 # -- B. Data Analysis Questions
