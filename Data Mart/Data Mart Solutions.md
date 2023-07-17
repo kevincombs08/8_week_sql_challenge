@@ -56,8 +56,7 @@ SELECT
 	,ROUND((sales/transactions),2) AS avg_transaction
 FROM weekly_sales);
 ```
-![Screen Shot 2023-06-28 at 2 23 05 PM](https://github.com/kevincombs08/8_week_sql_challenge/assets/126277909/da55de3a-61b7-45a1-965a-33915e47dabb)
-
+![Screen Shot 2023-07-17 at 3 42 37 PM](https://github.com/kevincombs08/8_week_sql_challenge/assets/126277909/52daca26-89d3-4240-8c26-556384a29c20)
 
 # -- 2. Data Exploration
 
@@ -67,7 +66,7 @@ SELECT
 	DISTINCT DATE_FORMAT(week_date,'%a') AS week_day
 FROM clean_weekly_sales;
 ```
-![Screen Shot 2023-06-28 at 2 29 54 PM](https://github.com/kevincombs08/8_week_sql_challenge/assets/126277909/bd8b877d-91cb-48ab-98da-bf8bedd59552)
+![Screen Shot 2023-07-17 at 3 43 26 PM](https://github.com/kevincombs08/8_week_sql_challenge/assets/126277909/9bb46845-e653-4c35-add4-439c9b870970)
 
 -- What range of week numbers are missing from the dataset?
 ```
@@ -75,7 +74,7 @@ SELECT
 	52 - COUNT(DISTINCT week_number) AS missing_weeks
 FROM clean_weekly_sales;
 ```
-![Screen Shot 2023-06-28 at 2 30 17 PM](https://github.com/kevincombs08/8_week_sql_challenge/assets/126277909/bbf9bf32-e4b2-4adc-a46d-ad6c4c3c4e12)
+![Screen Shot 2023-07-17 at 3 43 45 PM](https://github.com/kevincombs08/8_week_sql_challenge/assets/126277909/dd531554-02ac-4a70-bb80-74a9d8817fe9)
 
 -- How many total transactions were there for each year in the dataset?
 ```
@@ -86,7 +85,7 @@ FROM clean_weekly_sales
 GROUP BY year_number
 ORDER BY year_number ASC;
 ```
-![Screen Shot 2023-06-28 at 2 30 42 PM](https://github.com/kevincombs08/8_week_sql_challenge/assets/126277909/6a84a36a-2cf4-449a-8042-0d54574b930f)
+![Screen Shot 2023-07-17 at 3 44 00 PM](https://github.com/kevincombs08/8_week_sql_challenge/assets/126277909/2e8bd1ce-4930-4580-b7f2-cc102cea26e4)
 
 -- What is the total count of transactions for each platform
 ```
@@ -97,7 +96,7 @@ FROM clean_weekly_sales
 GROUP BY platform
 ORDER BY COUNT(*) DESC;
 ```
-![Screen Shot 2023-06-28 at 2 37 01 PM](https://github.com/kevincombs08/8_week_sql_challenge/assets/126277909/c7198704-28e1-43ea-8bb5-c9a3f7bbebf6)
+![Screen Shot 2023-07-17 at 3 44 18 PM](https://github.com/kevincombs08/8_week_sql_challenge/assets/126277909/8f3c909a-062f-4338-b547-b5129528be44)
 
 -- What is the percentage of sales for Retail vs Shopify for each month?
 ```
@@ -122,7 +121,7 @@ FROM cte_1
 GROUP BY 1,2
 ORDER BY year_number,month_number ASC;
 ```
-![Screen Shot 2023-06-28 at 2 37 31 PM](https://github.com/kevincombs08/8_week_sql_challenge/assets/126277909/16c9e34d-ca50-41c1-b0c7-0f9ccef32498)
+![Screen Shot 2023-07-17 at 3 44 40 PM](https://github.com/kevincombs08/8_week_sql_challenge/assets/126277909/fb0759e9-8741-4b12-b8a8-21b85ee7d661)
 
 -- What is the percentage of sales by demographic for each year in the dataset?
 ```
@@ -148,7 +147,7 @@ FROM cte_1
 GROUP BY 1
 ORDER BY year_number; 
 ```
-![Screen Shot 2023-06-28 at 2 38 03 PM](https://github.com/kevincombs08/8_week_sql_challenge/assets/126277909/6f1f5d01-1c77-48d6-bfcb-64c394c42d19)
+![Screen Shot 2023-07-17 at 3 45 01 PM](https://github.com/kevincombs08/8_week_sql_challenge/assets/126277909/68a7a08f-0125-4234-9edd-540ed189dbe3)
 
 -- Which age_band and demographic values contribute the most to Retail sales?
 ```
@@ -161,7 +160,7 @@ FROM clean_weekly_sales
 GROUP BY 1,2
 ORDER BY SUM(sales) DESC; 
 ```
-![Screen Shot 2023-06-28 at 2 38 30 PM](https://github.com/kevincombs08/8_week_sql_challenge/assets/126277909/18b17f74-277d-4d85-8e68-96508714e237)
+![Screen Shot 2023-07-17 at 3 45 35 PM](https://github.com/kevincombs08/8_week_sql_challenge/assets/126277909/65afe5d6-6328-48c9-841b-d8af68c0f224)
 
 -- Can we use the avg_transaction column to find the average transaction size for each year for Retail vs Shopify? If not - how would you calculate it instead?
 ```
@@ -173,8 +172,7 @@ SELECT
 FROM clean_weekly_sales
 GROUP BY 1,2;
 ```
-![Screen Shot 2023-06-28 at 2 38 54 PM](https://github.com/kevincombs08/8_week_sql_challenge/assets/126277909/b4f0c98b-05ff-4130-a009-1bf05db5a626)
-
+![Screen Shot 2023-07-17 at 3 45 54 PM](https://github.com/kevincombs08/8_week_sql_challenge/assets/126277909/71b1cfc7-3dcb-46c7-bf21-f6f5e4f9a548)
 
 # -- 3. Before & After Analysis
 
@@ -210,7 +208,7 @@ SELECT
     ,CONCAT(ROUND((((four_after-four_prior)/four_prior)*100),2),'%') AS pct_change
 FROM wow_changes;
 ```
-![Screen Shot 2023-06-28 at 2 39 24 PM](https://github.com/kevincombs08/8_week_sql_challenge/assets/126277909/a231589b-5568-46e5-b4d2-a3c5af724178)
+![Screen Shot 2023-07-17 at 3 46 14 PM](https://github.com/kevincombs08/8_week_sql_challenge/assets/126277909/a0e4bcbf-2b8b-4517-88fa-da34b489026c)
 
 -- What about the entire 12 weeks before and after?
 ```
@@ -237,7 +235,7 @@ SELECT
     ,CONCAT(ROUND((((next_12 - prior_12)/prior_12)*100),2),'%')
 FROM changes_week;
 ```
-![Screen Shot 2023-06-28 at 2 40 03 PM](https://github.com/kevincombs08/8_week_sql_challenge/assets/126277909/8947563f-23f0-43c6-8b3b-6a9707309747)
+![Screen Shot 2023-07-17 at 3 46 50 PM](https://github.com/kevincombs08/8_week_sql_challenge/assets/126277909/d7f101e5-7b34-4c1c-afd2-e76937161a73)
 
 -- How do the sale metrics for these 2 periods before and after compare with the previous years in 2018 and 2019?
 ```
@@ -280,7 +278,7 @@ SELECT
 FROM changes_week
 ORDER BY year_number ASC;
 ```
-![Screen Shot 2023-06-28 at 2 40 39 PM](https://github.com/kevincombs08/8_week_sql_challenge/assets/126277909/48c164ee-14ec-47f3-b0f0-e6145c4716cc)
+![Screen Shot 2023-07-17 at 3 48 09 PM](https://github.com/kevincombs08/8_week_sql_challenge/assets/126277909/7a6c4723-bad0-488f-b632-39b4ea98aab3)
 
 # -- 4. Bonus Question
 
@@ -315,7 +313,7 @@ SELECT
     ,CONCAT(ROUND((((next_12 - prior_12)/prior_12)*100),2),'%') AS pct_change
 FROM changes_week;
 ```
-![Screen Shot 2023-06-28 at 2 41 51 PM](https://github.com/kevincombs08/8_week_sql_challenge/assets/126277909/ebc536ff-b690-4bc1-8eae-119db35f6456)
+![Screen Shot 2023-07-17 at 3 48 33 PM](https://github.com/kevincombs08/8_week_sql_challenge/assets/126277909/f62463b6-5f2b-4aa8-945c-f2cea7b20164)
 
 -- platform
 ```    
@@ -346,7 +344,7 @@ SELECT
     ,CONCAT(ROUND((((next_12 - prior_12)/prior_12)*100),2),'%') AS pct_change
 FROM changes_week;
 ```
-![Screen Shot 2023-06-28 at 2 42 17 PM](https://github.com/kevincombs08/8_week_sql_challenge/assets/126277909/2c8e01bd-a8f1-4bb3-97d5-29d56a7de2ec)
+![Screen Shot 2023-07-17 at 3 48 50 PM](https://github.com/kevincombs08/8_week_sql_challenge/assets/126277909/b34e2c9d-74a7-40fe-a67c-766d1a882cc5)
 
 -- age_band
 ```    
@@ -377,9 +375,8 @@ SELECT
     ,CONCAT(ROUND((((next_12 - prior_12)/prior_12)*100),2),'%') AS pct_change
 FROM changes_week;
 ```
-![Screen Shot 2023-06-28 at 2 44 03 PM](https://github.com/kevincombs08/8_week_sql_challenge/assets/126277909/1e1d651e-1959-40a6-8054-ffa1e01a593a)
+![Screen Shot 2023-07-17 at 3 49 10 PM](https://github.com/kevincombs08/8_week_sql_challenge/assets/126277909/d5cc129c-c6c2-4fee-99c0-4293259a0894)
 
-   
 -- demographic
 ```    
 WITH twelve_week AS(
@@ -409,7 +406,7 @@ SELECT
     ,CONCAT(ROUND((((next_12 - prior_12)/prior_12)*100),2),'%') AS pct_change
 FROM changes_week;
 ```
-![Screen Shot 2023-06-28 at 2 45 00 PM](https://github.com/kevincombs08/8_week_sql_challenge/assets/126277909/a1f75dac-9f24-470e-92ec-fefefa6d2aea)
+![Screen Shot 2023-07-17 at 3 49 33 PM](https://github.com/kevincombs08/8_week_sql_challenge/assets/126277909/68f10c55-2553-4e8f-b361-bab9896d9831)
 
 -- customer_type
 ```    
@@ -440,5 +437,5 @@ SELECT
     ,CONCAT(ROUND((((next_12 - prior_12)/prior_12)*100),2),'%') AS pct_change
 FROM changes_week;
 ```
-![Screen Shot 2023-06-28 at 2 45 50 PM](https://github.com/kevincombs08/8_week_sql_challenge/assets/126277909/698e0a89-c394-40ee-b41a-87ee6f94ea67)
+![Screen Shot 2023-07-17 at 3 49 53 PM](https://github.com/kevincombs08/8_week_sql_challenge/assets/126277909/fc099f8a-366f-454f-acb8-49f73c51581b)
 
