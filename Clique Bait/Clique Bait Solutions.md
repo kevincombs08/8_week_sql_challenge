@@ -7,7 +7,7 @@ SELECT
 	COUNT(DISTINCT user_id) AS user_count
 FROM users; 
 ```
-![Screen Shot 2023-06-28 at 3 16 29 PM](https://github.com/kevincombs08/8_week_sql_challenge/assets/126277909/caf7b17b-9415-4210-9b29-2f34511c9d51)
+![Screen Shot 2023-07-17 at 2 55 42 PM](https://github.com/kevincombs08/8_week_sql_challenge/assets/126277909/f7b19588-6594-4245-b383-b56d6d48c5ec)
 
 -- How many cookies does each user have on average?
 ```
@@ -21,7 +21,7 @@ SELECT
 	ROUND(AVG(cookie_count),0) AS avg_count
 FROM cookie_count;
 ```
-![Screen Shot 2023-06-28 at 3 16 50 PM](https://github.com/kevincombs08/8_week_sql_challenge/assets/126277909/53587921-a554-43d5-8223-c04bf6d19563)
+![Screen Shot 2023-07-17 at 2 56 06 PM](https://github.com/kevincombs08/8_week_sql_challenge/assets/126277909/7c905e52-b9d3-4a08-93e3-c24204b8e7d7)
 
 -- What is the unique number of visits by all users per month?
 ```    
@@ -31,7 +31,7 @@ SELECT
 FROM events
 GROUP BY 1; 
 ```
-![Screen Shot 2023-06-28 at 3 17 11 PM](https://github.com/kevincombs08/8_week_sql_challenge/assets/126277909/f3983259-e0d2-45cc-b612-de6a7a30e3d9)
+![Screen Shot 2023-07-17 at 2 56 28 PM](https://github.com/kevincombs08/8_week_sql_challenge/assets/126277909/dde0e9dc-5f2c-4acc-a495-2f0b9d603f6c)
 
 -- What is the number of events for each event type?
 ```    
@@ -41,8 +41,8 @@ SELECT
 FROM events
 GROUP BY 1; 
 ```
-![Screen Shot 2023-06-28 at 3 17 34 PM](https://github.com/kevincombs08/8_week_sql_challenge/assets/126277909/90db3fcc-2711-4fd8-9695-339ce8c911ba)
- 
+![Screen Shot 2023-07-17 at 3 14 25 PM](https://github.com/kevincombs08/8_week_sql_challenge/assets/126277909/58cf0d15-6c3b-4e92-b7b6-c1cc7aa278ce)
+
 -- What is the percentage of visits which have a purchase event?
 ```
 WITH purchases_per_visit AS(    
@@ -54,8 +54,8 @@ SELECT
 	CONCAT(ROUND(((purchases/visit_count)*100),0),'%') AS purchase_pct
 FROM purchases_per_visit;
 ```
-![Screen Shot 2023-06-28 at 3 25 48 PM](https://github.com/kevincombs08/8_week_sql_challenge/assets/126277909/b0de708e-fdf6-4949-ba9f-9052c0313daa)
- 
+ ![Screen Shot 2023-07-17 at 3 14 45 PM](https://github.com/kevincombs08/8_week_sql_challenge/assets/126277909/1a398584-6a59-4e08-abe3-7ec74dc3c784)
+
 -- What is the percentage of visits which view the checkout page but do not have a purchase event?
 ```
 WITH checkouts AS(    
@@ -69,7 +69,7 @@ SELECT
 	CONCAT(ROUND(((1-(SUM(purchases)/SUM(checkout)))*100),0),'%') AS checkout_pct
 FROM checkouts;
 ```
-![Screen Shot 2023-06-28 at 3 26 13 PM](https://github.com/kevincombs08/8_week_sql_challenge/assets/126277909/d2bc2644-abcf-4e69-ad50-f1012318757c)
+![Screen Shot 2023-07-17 at 3 15 05 PM](https://github.com/kevincombs08/8_week_sql_challenge/assets/126277909/7cc3648a-0c8e-498a-854a-8222b73922fb)
 
 -- What are the top 3 pages by number of views?
 ```    
@@ -81,7 +81,7 @@ GROUP BY 1
 ORDER BY page_views DESC
 LIMIT 3;
 ```
-![Screen Shot 2023-06-28 at 3 26 27 PM](https://github.com/kevincombs08/8_week_sql_challenge/assets/126277909/0a13f605-118f-414a-b73b-33ab15c76283)
+![Screen Shot 2023-07-17 at 3 18 11 PM](https://github.com/kevincombs08/8_week_sql_challenge/assets/126277909/8f03e9bf-5ac7-48b0-9999-a7149e17690f)
 
 -- What is the number of views and cart adds for each product category?
 ```    
@@ -96,7 +96,7 @@ WHERE p.product_category IS NOT NULL
 GROUP BY 1
 ORDER BY page_view DESC; 
 ```
-![Screen Shot 2023-06-28 at 3 26 49 PM](https://github.com/kevincombs08/8_week_sql_challenge/assets/126277909/ed078f68-e0da-48b0-ae5b-457b3e74704d)
+![Screen Shot 2023-07-17 at 3 18 32 PM](https://github.com/kevincombs08/8_week_sql_challenge/assets/126277909/b449fbed-2c4c-4a11-884d-6636d455f47f)
 
 # -- Product Funnel Analysis
 -- Using a single SQL query - create a new output table which has the following details:
@@ -154,8 +154,8 @@ SELECT
 FROM tables
 ORDER BY pages ASC;
 ```
-![Screen Shot 2023-06-28 at 3 27 14 PM](https://github.com/kevincombs08/8_week_sql_challenge/assets/126277909/985fddc3-0d96-4766-bcf3-9f23200e50f5)
-   
+![Screen Shot 2023-07-17 at 3 18 58 PM](https://github.com/kevincombs08/8_week_sql_challenge/assets/126277909/0a155062-68dd-4873-9306-e55bae0dc9dd)
+
 -- Additionally, create another table which further aggregates the data for the above points but this time for each product category instead of individual products.
 ```    
 WITH page_stats AS(
@@ -209,7 +209,8 @@ SELECT
 FROM tables
 GROUP BY 1;
 ```
-![Screen Shot 2023-06-28 at 3 27 39 PM](https://github.com/kevincombs08/8_week_sql_challenge/assets/126277909/fa127a60-abe2-46bb-8f95-438f2b24642c)
+![Screen Shot 2023-07-17 at 3 19 28 PM](https://github.com/kevincombs08/8_week_sql_challenge/assets/126277909/211cf734-6c31-4edd-b586-e5f6e0df9693)
+
 
 -- Use your 2 new output tables - answer the following questions:
 
@@ -259,7 +260,7 @@ SELECT
 FROM tables
 ORDER BY page_views DESC;
 ```
-![Screen Shot 2023-06-28 at 3 28 05 PM](https://github.com/kevincombs08/8_week_sql_challenge/assets/126277909/7fb99b88-1a5f-4072-83d6-da1819620dd9)
+![Screen Shot 2023-07-17 at 3 19 52 PM](https://github.com/kevincombs08/8_week_sql_challenge/assets/126277909/fba4593e-0a41-4b2b-9e58-11096b716f2f)
 
 -- Which product was most likely to be abandoned?
 ```    
@@ -307,7 +308,7 @@ SELECT
 FROM tables
 ORDER BY abandoned DESC;
 ```
-![Screen Shot 2023-06-28 at 3 28 35 PM](https://github.com/kevincombs08/8_week_sql_challenge/assets/126277909/18436199-99fe-44dc-870e-a36b78294815)
+![Screen Shot 2023-07-17 at 3 20 20 PM](https://github.com/kevincombs08/8_week_sql_challenge/assets/126277909/ec4b9cf0-3609-4bef-ab8b-6b032647de6c)
 
 -- Which product had the highest view to purchase percentage?
 ```    
@@ -356,8 +357,8 @@ SELECT
 FROM tables
 ORDER BY CONCAT(ROUND(((purchases/page_views)*100),2), '%') DESC;
 ```
- ![Screen Shot 2023-06-28 at 3 29 00 PM](https://github.com/kevincombs08/8_week_sql_challenge/assets/126277909/76445690-6a5e-401f-a3ff-e7a87cdf379f)
-   
+![Screen Shot 2023-07-17 at 3 20 44 PM](https://github.com/kevincombs08/8_week_sql_challenge/assets/126277909/7e841919-dd8e-4464-9e91-0bbbc9ebdb28)
+
 -- What is the average conversion rate from view to cart add?
 ```    
 WITH page_stats AS(
@@ -405,7 +406,8 @@ SELECT
 FROM tables
 ORDER BY CONCAT(ROUND(((add_to_carts/page_views)*100),2), '%') DESC;
 ```
-![Screen Shot 2023-06-28 at 3 31 22 PM](https://github.com/kevincombs08/8_week_sql_challenge/assets/126277909/e6b13995-3229-4849-aed8-726294174b9a)
+![Screen Shot 2023-07-17 at 3 21 17 PM](https://github.com/kevincombs08/8_week_sql_challenge/assets/126277909/aa86115b-14bb-4a9c-9f29-cf00f9e6915c)
+
     
 -- What is the average conversion rate from cart add to purchase?
 ```    
@@ -454,7 +456,7 @@ SELECT
 FROM tables
 ORDER BY CONCAT(ROUND(((purchases/add_to_carts)*100),2), '%') DESC;
 ```
-![Screen Shot 2023-06-28 at 3 31 56 PM](https://github.com/kevincombs08/8_week_sql_challenge/assets/126277909/c778e931-e6b9-4eb1-aa2c-a2cefb9b690e)
+![Screen Shot 2023-07-17 at 3 21 39 PM](https://github.com/kevincombs08/8_week_sql_challenge/assets/126277909/ba1e454a-0b00-4422-8df6-b0607dfc4f19)
 
 # -- Campaigns Analysis
 -- Generate a table that has 1 single row for every unique visit_id record and has the following columns:
@@ -501,5 +503,6 @@ FROM events AS ev
 GROUP BY 1,2,3;
 ORDER BY u.user_id;
 ```
-![Screen Shot 2023-06-28 at 3 32 38 PM](https://github.com/kevincombs08/8_week_sql_challenge/assets/126277909/f17720cb-056a-4a2e-85b9-d4c5cdb2781c)
-  
+![Screen Shot 2023-07-17 at 3 22 02 PM](https://github.com/kevincombs08/8_week_sql_challenge/assets/126277909/c11072f3-f36d-43af-afcc-0c0a3329763a)
+
+
