@@ -12,7 +12,7 @@ LIMIT 1;
 -- 2) Which customer has made the most orders?
 
 SELECT 
-	do.customer_id
+     do.customer_id
     ,CONCAT(dc.first_name,' ', dc.last_name) as name
     ,COUNT(do.order_id)
 FROM dim_orders as do
@@ -25,7 +25,7 @@ GROUP BY 1,2;
 
 WITH cte_1 AS(
 SELECT
-	doi.product_id AS product_id
+    doi.product_id AS product_id
     ,dp.product_name AS product_name
     ,dp.price AS price
     ,sum(doi.quantity) AS quantity
